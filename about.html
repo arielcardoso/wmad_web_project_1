@@ -123,7 +123,9 @@
                                 <a href="#map">Map</a>
                             </li>
                             <li>
-                                <a href="#contact">Contact</a>
+                                <a href="#" onclick="showModal('contact-modal');" >
+                                    Contact
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -169,6 +171,42 @@
             </div>
             <hr/>
             <button class="btn btn-primary">Login</button>
+        </form>
+    </div>
+
+    <!-- Contact Modal -->
+    <div class="modal modal-sm" id="contact-modal">
+        <button class="btn-close-modal">
+            <i class="fas fa-times"></i>
+        </button>
+        <h1>CONTACT</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <form action="">
+            <div class="row">
+                <div class="col-1">
+                    <input type="text" placeholder="Full Name" >
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <input type="text" placeholder="E-mail" >
+                </div>
+                <div class="col-2">
+                    <input type="text" placeholder="Phone" >
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1">
+                    <input type="text" placeholder="Subject" >
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1">
+                    <input type="text" placeholder="Message" >
+                </div>
+            </div>
+            <hr/>
+            <button class="btn btn-primary">Send message</button>
         </form>
     </div>
 

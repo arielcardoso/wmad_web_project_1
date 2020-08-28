@@ -577,34 +577,26 @@ footer .row .social a:hover {
 }
 
 /* Login */
-#login-modal .btn {
+.modal form .btn {
     display: block;
     width: 100%;
     margin-top: 15px;
     padding: 12px 0;
 }
-#login-modal input {
+.modal form input {
     width: 100%;
     background: #eee;
     margin-bottom: 5px;
 }
-#login-modal hr {
+.modal form hr {
     margin: 0;
 }
-#login-modal .row {
+.modal form .row {
     margin: 0 -5px;
 }
-#login-modal .row .col-1,
-#login-modal .row .col-2 {
+.modal form .row .col-1,
+.modal form .row .col-2 {
     padding: 0 5px;
-}
-
-/* Contact */
-#contact-modal .btn {
-    display: block;
-    width: 100%;
-    margin-top: 15px;
-    padding: 12px 0;
 }
 
 /* Animations */
