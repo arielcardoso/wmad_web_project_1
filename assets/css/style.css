@@ -93,7 +93,7 @@ section {
 .list-items .content h2 {
     margin-top: 0;
 }
-.news-list .list-items img {
+.list-items img {
     max-width: 360px;
 }
 input {
@@ -348,7 +348,8 @@ nav li.dropdown .dropdown-menu a:hover {
     background-color: rgba(0,115,188, 1);
     color: #fff;
 }
-nav a.login {
+nav a.login, 
+nav a.btn-menu {
     font-size: 1.5rem;
     padding: 6px 10px 0px 15px;
     margin-bottom: 10px;
@@ -360,6 +361,54 @@ nav a.login:hover {
     color: #0073BC;
     border-bottom: 0;
 }
+/* Menu responsive collapsed */
+header nav.collapsed ul {
+    display: block;
+    opacity: 1;
+    position: absolute;
+    top: 70px;
+    background: #0073BC;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 300;
+}
+header nav.collapsed ul li.dropdown {
+    cursor: not-allowed;
+}
+header nav.collapsed ul li {
+    display: block;
+    width: 100%;
+    padding: 0;
+}
+header nav.collapsed ul li a {
+    text-align: center;
+    padding: 30px;
+    color: #fff;
+    border-bottom: 1px solid rgba(0,0,0, 0.1);
+}
+header nav.collapsed ul li a:hover {
+    background: #005cb4;
+}
+
+
+header nav.collapsed li.dropdown:hover .dropdown-menu {
+    display: block !important;
+    position: relative;
+    z-index: auto;
+    right: auto;
+    margin: 0;
+    box-shadow: none;
+}
+header nav.collapsed li.dropdown:hover .dropdown-menu a {
+    
+    text-align: center;
+    padding: 30px;
+    color: #fff;
+    border-bottom: 1px solid rgba(0,0,0, 0.1);
+}
+
+
 
 /* Header Pages */
 .page-header {
@@ -545,6 +594,7 @@ footer .row .social a:hover {
     box-shadow: 0px 4px 15px rgba(0,0,0,0.3);
 }
 .service-detail .badget {
+    display: inline-block;
     padding: 8px 15px;
     background-color: #eee;
     border-radius: 4px;
@@ -616,9 +666,32 @@ footer .row .social a:hover {
     .page-header .row {
         height: 100px;
     }
+    nav a.login, 
+    nav a.btn-menu {
+        padding: 20px;
+        margin: 0;
+    }
+    nav a.btn-menu {
+        padding-right: 10px;
+    }
 }
+
 @media only screen and (max-width: 767px) {
+    
     /* Navbar */
+    header .brand img {
+        width: 140px;
+    }
+    header .navbar {
+        align-items: center;
+    }
+    header nav ul {
+        display: none;
+        opacity: 0.0;
+    }
+    nav a.login {
+        margin-bottom: 0;
+    }
 
     /* Footer */
     footer .row {
@@ -644,6 +717,11 @@ footer .row .social a:hover {
     }
 
     /* Page Header */
+    .page-header h1 {
+        margin-top: 30px;
+        text-align: left;
+        font-size: 2.4rem;    
+    }
     .page-header .row {
         flex-wrap: wrap;
     }
@@ -668,6 +746,83 @@ footer .row .social a:hover {
     }
     .page-header .reviews .ratings i {
         font-size: 1rem;
+    }
+
+    /* Home Contents */
+    #home-page section.discover {
+        flex-wrap: nowrap;
+        padding: 15px;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+    }
+    #home-page section.discover h1.title-center {
+        background: #000;
+        margin: 0;
+        padding: 30px 0;
+        color: #fff;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    #home-page section.discover .col-3 {
+        margin: 0;
+        padding: 0;
+    }
+    #home-page section.discover .place-img,
+    #home-page section.discover .place-img::before,
+    #home-page section.discover .place-img img {
+        border-radius: 0 !important;
+    }
+    #home-page section.discover .place-img{
+        overflow: hidden;
+        margin-bottom: 30px;
+    }
+    #home-page section.discover .place-img img {
+        width: 270px;
+    }
+    #home-page section.discover hr {
+        display: none;
+    }
+    .place-img .content {
+        padding-bottom: 30px;
+    }
+    .place-img .content p {
+        font-size: 0.4rem;
+        margin-bottom: 4px;
+    }
+    .place-img .content h1 {
+        font-size: 0.9rem;
+        letter-spacing: 0;
+        font-weight: 500;
+    }
+    .list-items {
+        flex-wrap: wrap;
+    }
+    .list-items img {
+        flex-basis: 100%;
+        flex: 1;
+        max-width: none;
+    }
+    .list-items .content {
+        flex-basis: 100%;
+        flex: 1;
+        padding: 15px;
+    }
+    #news hr {
+        display: inline;
+    }
+
+    /* Newsletter */
+    .newsletter .row {
+        flex-wrap: wrap;
+        margin: 0;
+    }
+    .newsletter .row .col {
+        flex-basis: 100%;
+        margin: 0;
+    }
+    .newsletter-form input {
+        width: 100%;
     }
 
     /* Service Details */
@@ -697,8 +852,7 @@ footer .row .social a:hover {
         border-radius: 0;
         margin: 20px 20px;
     }
-}
-
-@media only screen and (max-width: 600px) {
-
+    .service-detail .badget {
+        font-size: 0.8rem;
+    }
 }

@@ -1,7 +1,9 @@
 
 /*== RESPONSIVE MENU ======================  */
-
-
+document.getElementById("btn-menu").addEventListener("click", function(){
+    let nav = document.getElementsByTagName("nav")[0];
+    nav.classList.toggle("collapsed");
+});
 
 /*== MODALS ===============================  */
 
@@ -9,6 +11,11 @@
 function showModal(id) {
     document.getElementById(id).classList.add("modal-oppened");
     document.body.classList.add("modal-oppened");
+
+    //close menu responsive if oppened
+    let nav = document.getElementsByTagName("nav")[0];
+    nav.classList.remove("collapsed");
+
     return false;
 }
 
