@@ -188,6 +188,8 @@ input {
     flex: 1;
 }
 .page-with-sidebar .page-sidebar ul {
+    position: sticky;
+    top: 50px;
     background-color: #eee;
     list-style: none;
     padding: 20px;
