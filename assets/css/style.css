@@ -551,9 +551,6 @@ footer .row .social a:hover {
 }
 
 /* Place Page */
-#places-page .col {
-    padding: 30px;
-}
 #places-page .bg-light {
     background-color: #f1f1f1;
 }
@@ -824,6 +821,27 @@ footer .row .social a:hover {
     .newsletter-form input {
         width: 100%;
     }
+
+    /* Places pages */
+    #places-page .beaches .row,
+    #places-page .parks .row,
+    #places-page .church .row {
+        flex-wrap: wrap;
+    }
+    #places-page .beaches .row .col,
+    #places-page .parks .row .col,
+    #places-page .church .row .col {
+        flex-basis: 100%;
+    }
+    #places-page .beaches .row .col:first-child,
+    #places-page .church .row .col:first-child {
+        order: 1;
+    }
+    #places-page .beaches .row .col:last-child,
+    #places-page .church .row .col:last-child {
+        order: 0;
+    }
+
 
     /* Service Details */
     .service-detail {
