@@ -842,6 +842,14 @@ footer .row .social a:hover {
         order: 0;
     }
 
+    /* Services List */
+    .services-list .service-item {
+        flex: 1;
+        flex-basis: 100%;
+    }
+    .services-list .service-item {
+        margin-bottom: 15px;
+    }
 
     /* Service Details */
     .service-detail {
