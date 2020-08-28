@@ -207,6 +207,20 @@ input {
     color: #0073BC;
 }
 
+/* Services List */
+.services-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+.services-list .service-item {
+    width: 32%;
+    padding: 0px;
+    margin-bottom: 30px;
+}
+
 /* Header & Navbar */
 header {
     background-color: #fff;
@@ -445,6 +459,8 @@ footer .row .social a:hover {
 #places-page img {
     box-shadow: 0 10px 15px rgba(0,0,0, 0.2);
 }
+
+
 
 /* Animations */
 @keyframes fadeAndScale {
