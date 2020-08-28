@@ -25,6 +25,7 @@ p {
 img {
     width: 100%;
     position: relative;
+    border-radius: 10px;
 }
 a {
     text-decoration: none;
@@ -98,6 +99,10 @@ input {
     border-radius: 4px;
     padding: 10px 20px;
     outline: none;
+    box-shadow: 0 6px 15px rgba(0,0,0, 0.2);
+}
+.btn:hover {
+    box-shadow: 0 0 6px rgba(0,0,0, 0.2);
 }
 .btn-primary {
     color: #fff;
@@ -118,7 +123,57 @@ input {
     color: #FFB039;
 }
 
-/* Header */
+/* Banner Image */
+.place-img {
+    position: relative;
+    display: block;
+    border-radius: 10px;
+}
+.place-img::before {
+    content: " ";
+    position: absolute;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 3px;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.8) 25%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 100%);
+}
+.place-img img {
+    border-radius: 10px;
+}
+.place-img .content {
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-bottom: 50px;
+    color: #fff;
+    text-align: center;
+}
+.place-img .content h1,
+.place-img .content h2,
+.place-img .content h3,
+.place-img .content h4,
+.place-img .content h5 {
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 0;
+}
+.place-img .content h1 {
+    font-size: 2rem;
+}
+.place-img .content p {
+    letter-spacing: 2px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header & Navbar */
 header {
     background-color: #fff;
 }
@@ -209,6 +264,7 @@ nav a.login:hover {
     color: #fff;
     background-color: #062d7e;
     padding: 0;
+    box-shadow: 0 6px 15px rgba(0,0,0, 0.2);
 }
 .page-header .row {
     justify-content: space-between;
@@ -251,10 +307,6 @@ nav a.login:hover {
 #restaurants-page .page-header {
     background: #9f2e01 url(../img/header_restaurants.jpg) no-repeat center center;
     background-size: cover;
-}
-#hotel-info-page .page-header,
-#restaurant-info-page .page-header {
-    
 }
 
 /* Footer */
@@ -345,54 +397,19 @@ footer .row .social a:hover {
     max-width: 500px;
 }
 
-/* Place Image / Banner */
-.place-img {
-    position: relative;
-    display: block;
-    border-radius: 10px;
+/* Place Page */
+#places-page .col {
+    padding: 30px;
 }
-.place-img::before {
-    content: " ";
-    position: absolute;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 3px;
-    background: rgb(0,0,0);
-    background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.8) 25%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 100%);
+#places-page .bg-light {
+    background-color: #f1f1f1;
 }
-.place-img img {
-    border-radius: 10px;
+#places-page a.btn {
+    display: inline-block;
+    margin-top: 20px;
 }
-.place-img .content {
-    z-index: 2;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding-bottom: 50px;
-    color: #fff;
-    text-align: center;
-}
-.place-img .content h1,
-.place-img .content h2,
-.place-img .content h3,
-.place-img .content h4,
-.place-img .content h5 {
-    letter-spacing: 1px;
-    margin: 0;
-    padding: 0;
-}
-.place-img .content h1 {
-    font-size: 2rem;
-}
-.place-img .content p {
-    letter-spacing: 2px;
-    margin: 0;
-    padding: 0;
+#places-page img {
+    box-shadow: 0 10px 15px rgba(0,0,0, 0.2);
 }
 
 /* Animations */
