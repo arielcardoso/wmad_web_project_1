@@ -1,10 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap');
-
+html, body {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
 body {
     font-family: 'Montserrat', sans-serif;
     color: #181818;
     margin: 0;
     padding: 0;
+    overflow: auto;
 }
 h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
@@ -50,7 +56,7 @@ section {
     align-items: center;
     margin: 0 -15px;
 }
-.col, col-1, .col-2, .col-3, .col-4 {
+.col, .col-1, .col-2, .col-3, .col-4 {
     padding: 0 15px;
 }
 .col-1 {
@@ -214,18 +220,59 @@ input {
     color: #0073BC;
 }
 
-/* Services List */
-.services-list {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin: 0;
-    padding: 0;
+/* Modal */
+.modal-bg {
+    background: rgba(0,0,0, 0.95);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 200;
+    display: none;
+    opacity: 0;
 }
-.services-list .service-item {
-    width: 32%;
-    padding: 0px;
-    margin-bottom: 30px;
+.modal {
+    background: #fff;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 700px;
+    padding: 30px;
+    z-index: 201;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    margin-left: -350px;
+    display: none;
+    opacity: 0;
+}
+body.modal-oppened {
+    overflow: hidden;
+}
+body.modal-oppened .modal-bg,
+.modal-oppened {
+    display: block;
+    opacity: 1;
+    transition: all 1s ease-in-out;
+}
+.modal h1 {
+    margin-top: 0;
+}
+.modal-sm {
+    max-width: 400px;
+    margin-left: -200px;
+}
+.modal .btn-close-modal {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background: none;
+    border: 0;
+    font-size: 2rem;
+    color: #999;
+}
+.modal .btn-close-modal:hover {
+    color: #0073BC;
 }
 
 /* Header & Navbar */
@@ -433,6 +480,7 @@ footer .row .social a:hover {
 .newsletter-form {
     display: flex;
     flex-wrap: nowrap;
+    box-shadow: 0 5px 5px rgba(0,0,0, 0.1);
 }
 .newsletter-form input {
     border-radius: 0;
@@ -447,6 +495,7 @@ footer .row .social a:hover {
     border-radius: 0;
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
+    box-shadow: none;
 }
 .newsletter p {
     max-width: 500px;
@@ -462,6 +511,20 @@ footer .row .social a:hover {
 #places-page a.btn {
     display: inline-block;
     margin-top: 20px;
+}
+
+/* Services List */
+.services-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+.services-list .service-item {
+    width: 32%;
+    padding: 0px;
+    margin-bottom: 30px;
 }
 
 /* Services Details */
@@ -511,6 +574,37 @@ footer .row .social a:hover {
 .service-reviews p {
     text-align: justify;
     line-height: 120%;
+}
+
+/* Login */
+#login-modal .btn {
+    display: block;
+    width: 100%;
+    margin-top: 15px;
+    padding: 12px 0;
+}
+#login-modal input {
+    width: 100%;
+    background: #eee;
+    margin-bottom: 5px;
+}
+#login-modal hr {
+    margin: 0;
+}
+#login-modal .row {
+    margin: 0 -5px;
+}
+#login-modal .row .col-1,
+#login-modal .row .col-2 {
+    padding: 0 5px;
+}
+
+/* Contact */
+#contact-modal .btn {
+    display: block;
+    width: 100%;
+    margin-top: 15px;
+    padding: 12px 0;
 }
 
 /* Animations */

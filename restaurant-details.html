@@ -35,7 +35,7 @@
                                 </div>
                             </li>
                         </ul>
-                        <a href="#" class="login">
+                        <a href="#" onclick="showModal('login-modal');" class="login">
                             <i class="far fa-user"></i>
                         </a>
                     </nav>
@@ -130,6 +130,27 @@
             </div>
         </footer>
     </div>
+
+    <!-- Login Modal -->
+    <div class="modal modal-sm" id="login-modal">
+        <h1>LOGIN</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <form action="">
+            <div class="row">
+                <div class="col-1">
+                    <input type="text" placeholder="Username" >
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1">
+                    <input type="text" placeholder="Password" >
+                </div>
+            </div>
+            <hr/>
+            <button class="btn btn-primary">Login</button>
+        </form>
+    </div>
+
     <script src="assets/js/script.js"></script>
 </body>
 </html>
