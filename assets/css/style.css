@@ -118,6 +118,9 @@ input {
 .btn-primary:hover {
     background-color: #0584d3;
 }
+.shadow {
+    box-shadow: 0 10px 15px rgba(0,0,0, 0.2);
+}
 .title-center {
     font-weight: 300;
     text-align: center;
@@ -459,9 +462,6 @@ footer .row .social a:hover {
 #places-page a.btn {
     display: inline-block;
     margin-top: 20px;
-}
-#places-page img {
-    box-shadow: 0 10px 15px rgba(0,0,0, 0.2);
 }
 
 /* Services Details */
