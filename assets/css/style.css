@@ -620,6 +620,29 @@ footer .row .social a:hover {
 @media only screen and (max-width: 767px) {
     /* Navbar */
 
+    /* Footer */
+    footer .row {
+        flex-wrap: wrap;
+        margin: 0;
+    }
+    footer .row .col {
+        flex-basis: 100%;
+        text-align: center;
+    }
+    footer .row .col:first-child {
+        order: 1;
+    }
+    footer .row .col:last-child {
+        order: 0;
+    }
+    footer p {
+        margin: 0;
+        font-size: 0.7rem;
+    }
+    footer .social {
+        margin-bottom: 20px;
+    }
+
     /* Page Header */
     .page-header .row {
         flex-wrap: wrap;
