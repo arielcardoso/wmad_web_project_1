@@ -86,7 +86,6 @@ section {
 .news-list .list-items img {
     max-width: 360px;
 }
-
 input {
     border: 0;
     border-radius: 4px;
@@ -203,6 +202,59 @@ nav a.login {
 nav a.login:hover {
     color: #0073BC;
     border-bottom: 0;
+}
+
+/* Header Pages */
+.page-header {
+    color: #fff;
+    background-color: #062d7e;
+    padding: 0;
+}
+.page-header .row {
+    justify-content: space-between;
+    height: 150px;
+    position: relative;
+}
+.page-header .row .col:last-child {
+    text-align: right;
+}
+.page-header .row .col:last-child p {
+    margin-top: 10px;
+    margin-right: 5px;
+}
+.page-header h1 {
+    font-size: 3rem;
+    font-weight: 500;
+    margin-top: 70px;
+}
+.page-header h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+}
+.page-header p {
+    margin: 0;
+    font-size: 1.3rem;
+}
+#about-page .page-header {
+    background: #062d7e url(../img/header_about.jpg) no-repeat center center;
+    background-size: cover;
+}
+#places-page .page-header {
+    background: #163d03 url(../img/header_places.jpg) no-repeat center center;
+    background-size: cover;
+}
+#hotels-page .page-header {
+    background: #c0935c url(../img/header_hotels.jpg) no-repeat center center;
+    background-size: cover;
+}
+#restaurants-page .page-header {
+    background: #9f2e01 url(../img/header_restaurants.jpg) no-repeat center center;
+    background-size: cover;
+}
+#hotel-info-page .page-header,
+#restaurant-info-page .page-header {
+    
 }
 
 /* Footer */
