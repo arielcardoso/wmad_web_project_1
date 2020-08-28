@@ -68,6 +68,9 @@ section {
 .float-right {
     float: right;
 }
+.text-center {
+    text-align: center;
+}
 .list-items {
     display: flex;
     align-items: center;
@@ -171,6 +174,35 @@ input {
     letter-spacing: 2px;
     margin: 0;
     padding: 0;
+}
+
+/* Page with sidebar */
+.page-with-sidebar {
+    display: flex;
+    justify-content: space-between;
+}
+.page-with-sidebar .page-content {
+    flex: 3;
+}
+.page-with-sidebar .page-sidebar {
+    flex: 1;
+}
+.page-with-sidebar .page-sidebar ul {
+    background-color: #eee;
+    list-style: none;
+    padding: 20px;
+    border-radius: 10px;
+    margin-left: 60px;
+    margin-top: 50px;
+}
+.page-with-sidebar .page-sidebar ul li a {
+    display: block;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    color: #222;
+}
+.page-with-sidebar .page-sidebar ul li a:hover {
+    color: #0073BC;
 }
 
 /* Header & Navbar */
