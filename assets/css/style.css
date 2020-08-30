@@ -171,7 +171,6 @@ input {
     color: #fff;
     text-align: center;
 }
-.place-img .content h1,
 .place-img .content h2,
 .place-img .content h3,
 .place-img .content h4,
@@ -180,7 +179,7 @@ input {
     margin: 0;
     padding: 0;
 }
-.place-img .content h1 {
+.place-img .content h2 {
     font-size: 2rem;
 }
 .place-img .content p {
@@ -255,7 +254,7 @@ body.modal-oppened .modal-bg,
     opacity: 1;
     transition: all 1s ease-in-out;
 }
-.modal h1 {
+.modal h2 {
     margin-top: 0;
 }
 .modal-sm {
@@ -264,8 +263,8 @@ body.modal-oppened .modal-bg,
 }
 .modal .btn-close-modal {
     position: absolute;
-    top: 30px;
-    right: 30px;
+    top: 22px;
+    right: 22px;
     background: none;
     border: 0;
     font-size: 2rem;
@@ -799,10 +798,11 @@ footer .row .social a:hover {
         font-size: 0.4rem;
         margin-bottom: 4px;
     }
-    .place-img .content h1 {
+    .place-img .content h2 {
         font-size: 0.9rem;
         letter-spacing: 0;
         font-weight: 500;
+        height: 22px;
     }
     .list-items {
         flex-wrap: wrap;
