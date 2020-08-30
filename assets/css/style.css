@@ -106,6 +106,7 @@ input {
 .link {
     color: #0073BC;
     text-decoration: underline;
+    overflow-wrap: break-word;
 }
 .btn {
     border: 0;
