@@ -132,6 +132,9 @@ input {
     font-weight: 300;
     text-align: center;
 }
+.visible-xs {
+    display: none;
+}
 .ratings i {
     color: #ddd;
     font-size: 1.4rem;
@@ -433,15 +436,18 @@ header nav.collapsed li.dropdown:hover .dropdown-menu a {
     font-size: 3rem;
     font-weight: 500;
     margin-top: 70px;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
 }
 .page-header h2 {
     font-size: 2rem;
     font-weight: bold;
     margin: 0;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
 }
 .page-header p {
     margin: 0;
     font-size: 1.3rem;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
 }
 #about-page .page-header {
     background: #062d7e url(../img/header_about.jpg) no-repeat center center;
@@ -686,7 +692,19 @@ footer .row .social a:hover {
 }
 
 @media only screen and (max-width: 767px) {
-    
+
+    /* Components */
+    .visible-xs {
+        display: inherit;
+    }
+    .hide-xs {
+        display: none;
+    }
+    .btn {
+        font-size: 0.7rem;
+        padding: 8px 10px;
+    }
+
     /* Navbar */
     header .brand img {
         width: 140px;
@@ -726,22 +744,30 @@ footer .row .social a:hover {
     }
 
     /* Page Header */
+    .page-header {
+        background-size: auto 100% !important;
+    }
     .page-header h1 {
-        margin-top: 30px;
+        padding: 10px;
+        margin: 0;
         text-align: left;
-        font-size: 2.4rem;    
+        font-size: 1.8rem;    
     }
     .page-header .row {
+        height: auto;
         flex-wrap: wrap;
     }
     .page-header .row .col {
         flex-basis: 100%;
     }
     .page-header h2 {
-        font-size: 1.6rem;
+        font-size: 1.3rem;
+        margin-bottom: 10px
     }
     .page-header p {
         font-size: 1rem;
+        letter-spacing: 1px;
+        margin-top: 10px;
     }
     .page-header .reviews p {
         display: none;
@@ -750,7 +776,7 @@ footer .row .social a:hover {
         display: block;
         flex: none;
         position: absolute;
-        top: 22px;
+        top: 12px;
         right: 0;
     }
     .page-header .reviews .ratings i {
@@ -758,6 +784,12 @@ footer .row .social a:hover {
     }
 
     /* Home Contents */
+    .hero .title {
+        font-size: 3rem;
+    }
+    .hero .subtitle {
+        letter-spacing: 5px;
+    }
     #home-page section.discover {
         flex-wrap: nowrap;
         padding: 15px;
@@ -766,6 +798,7 @@ footer .row .social a:hover {
         padding: 0;
     }
     #home-page section.discover h1.title-center {
+        font-size: 1.2rem;
         background: #000;
         margin: 0;
         padding: 30px 0;
@@ -816,13 +849,16 @@ footer .row .social a:hover {
     .list-items .content {
         flex-basis: 100%;
         flex: 1;
-        padding: 15px;
+        padding: 15px 0;
     }
-    #news hr {
-        display: inline;
+    .news hr {
+        margin: 1rem 0;
     }
 
     /* Newsletter */
+    .newsletter h1 {
+        margin-top: 0;
+    }
     .newsletter .row {
         flex-wrap: wrap;
         margin: 0;
@@ -909,16 +945,25 @@ footer .row .social a:hover {
     }
     .service-detail hr {
         margin: 0;
+        height: 1px;
     }
     .service-reviews hr {
         margin: 0px;
+        height: 1px;
     }
     .service-reviews .quotes {
-        width: 40px;
+        width: 30px;
         border-radius: 0;
-        margin: 20px 20px;
+        margin: 20px 0 0 20px;
     }
     .service-detail .badget {
         font-size: 0.8rem;
+    }
+    .service-reviews h3 {
+        font-size: 1em;
+    }
+    .service-reviews p {
+        font-size: 0.8rem;
+        line-height: 140%;
     }
 }
