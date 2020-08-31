@@ -4,6 +4,8 @@ This website provide info about the City of Vitoria, ES Brazil. Presented to the
 
 For educational purpose only.
 
+### Project Page
+https://arielcardoso.github.io/wmad_web_project_1/
 
 ### Functionalities
 
